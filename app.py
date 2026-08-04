@@ -3,11 +3,6 @@ import operator
 
 import streamlit as st
 
-# CORRIGIDO: a lógica de cálculo estava toda misturada com o código de
-# interface (if/elif repetido 4x dentro do bloco do Streamlit). Isso
-# impedia testar o cálculo sem rodar o app inteiro, e duplicava o mesmo
-# padrão (calcula -> mostra) várias vezes. Agora a lógica pura fica
-# separada em uma função e um dicionário de operações.
 
 OPERACOES = {
     "+": operator.add,
@@ -50,9 +45,7 @@ if botao_calcular:
     try:
         numero1 = float(numero1_input)
         numero2 = float(numero2_input)
-        # CORRIGIDO: float() aceita "inf" e "nan" sem lançar ValueError.
-        # Sem essa checagem, esses valores passavam como se fossem
-        # entradas normais e geravam resultados sem sentido.
+       
         if not (numero_valido(numero1) and numero_valido(numero2)):
             raise ValueError("Valor não é um número finito.")
     except ValueError:
