@@ -10,10 +10,4 @@ while linhas <= qtd_linhas:
         coluna += 1
     linhas += 1
 
-
-
-
-
-
-
 print("Acabou")
