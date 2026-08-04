@@ -1,14 +1,14 @@
-# O método (append) server para adicionarmos itens a lista.
-#lista = [10,20,30]
-#lista.append(40) 
-#lista.append(50)
+# O método (append) serve para adicionarmos itens a lista.
+# lista = [10, 20, 30]
+# lista.append(40)
+# lista.append(50)
 
-#lista.pop() # O método (pop) sereve para tiramos um item da nossa lista
-#lista.append(60)
-#print(lista)
+# lista.pop()  # O método (pop) serve para tirarmos um item da nossa lista
+# lista.append(60)
+# print(lista)
 
-#lista.clear() # O método (clear) sere para limpar a lista
-#print(lista)
+# lista.clear()  # O método (clear) serve para limpar a lista
+# print(lista)
 
 # O método (insert) serve para escolhermos uma posição dentro da matriz
 # e adicionar um item na posição.

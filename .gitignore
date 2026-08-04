@@ -1,0 +1,15 @@
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Configurações locais de editor
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/

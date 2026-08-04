@@ -66,14 +66,14 @@ numero_secreto = 42
 tentativas = 3
 
 print("=== JOGO DE ADIVINHAÇÃO === ")
-print(f'Voçê tem {tentativas} para acertar o número secreto:')
+print(f'Você tem {tentativas} tentativas para acertar o número secreto:')
 
 while True:
     palpites = int(input('Digite o valor do seu palpite:'))
     tentativas = tentativas - 1
 
     if palpites == numero_secreto:
-        print("Meus parabéns, voçê acertou!!!")
+        print("Meus parabéns, você acertou!!!")
         break
 
     if tentativas == 0:
@@ -82,7 +82,7 @@ while True:
 
 
     if palpites < numero_secreto:
-        print(f"Seu paplite de {palpites} é menor que o número secreto")
+        print(f"Seu palpite de {palpites} é menor que o número secreto")
     
     else:
         print(f'Seu palpite de {palpites} é maior que o número secreto')

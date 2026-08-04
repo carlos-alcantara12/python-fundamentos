@@ -1,5 +1,6 @@
-# For + Range 
-# Range = (start, stop, step )
+# For + Range
+# Range = (start, stop, step)
 numeros = range(0, 30, 3)
 for numero in numeros:
-    print(numero)  # Imprime: 2, depois 3, depois 4... até 9
+    print(numero)  # CORRIGIDO: comentário desatualizado removido.
+                    # Imprime: 0, 3, 6, 9 ... até 27 (não inclui o 30)

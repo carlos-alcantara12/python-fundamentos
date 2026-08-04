@@ -1,61 +1,67 @@
+import math
+import operator
+
 import streamlit as st
 
-# Configuração da página web
+# CORRIGIDO: a lógica de cálculo estava toda misturada com o código de
+# interface (if/elif repetido 4x dentro do bloco do Streamlit). Isso
+# impedia testar o cálculo sem rodar o app inteiro, e duplicava o mesmo
+# padrão (calcula -> mostra) várias vezes. Agora a lógica pura fica
+# separada em uma função e um dicionário de operações.
+
+OPERACOES = {
+    "+": operator.add,
+    "-": operator.sub,
+    "*": operator.mul,
+    "/": operator.truediv,
+}
+
+
+def calcular(numero1: float, numero2: float, operador: str) -> float:
+    """Executa a operação escolhida e retorna o resultado.
+
+    Lança ZeroDivisionError se for uma divisão por zero.
+    """
+    if operador == "/" and numero2 == 0:
+        raise ZeroDivisionError("Não é possível dividir por zero.")
+    return OPERACOES[operador](numero1, numero2)
+
+
+def numero_valido(valor: float) -> bool:
+    """Verifica se o valor é um número finito (rejeita inf e nan)."""
+    return math.isfinite(valor)
+
+
+# --- Interface ---
+
 st.set_page_config(page_title="Calculadora Segura", page_icon="🧮", layout="centered")
 
-st.title("=== CALCULADORA WEB ===")
+st.title("Calculadora Web")
 st.write("Desenvolvida por Carlos - Foco em Validação Segura de Dados")
-st.markdown("---")
+st.divider()
 
-# Criando o formulário na web
 with st.form(key="calculadora_form"):
-    
-    # Entradas de dados (o Streamlit já nos dá campos limpos)
     numero1_input = st.text_input("Digite o primeiro valor:")
     numero2_input = st.text_input("Digite o segundo valor:")
-    
-    # Caixa de seleção para o operador
-    operador = st.selectbox("Selecione o operador:", ["+", "-", "*", "/"])
-    
-    # Botão para enviar o formulário e calcular
+    operador = st.selectbox("Selecione o operador:", list(OPERACOES.keys()))
     botao_calcular = st.form_submit_button(label="Calcular")
 
-# Se o usuário clicar no botão, processamos os dados com a sua lógica de segurança
 if botao_calcular:
-    
-    # --- Validação de Entrada (Sua lógica de Try/Except!) ---
     try:
-        # Tentamos converter as entradas de texto para float
         numero1 = float(numero1_input)
         numero2 = float(numero2_input)
-        numeros_validos = True
+        # CORRIGIDO: float() aceita "inf" e "nan" sem lançar ValueError.
+        # Sem essa checagem, esses valores passavam como se fossem
+        # entradas normais e geravam resultados sem sentido.
+        if not (numero_valido(numero1) and numero_valido(numero2)):
+            raise ValueError("Valor não é um número finito.")
     except ValueError:
-        numeros_validos = False
-
-    # Se a validação falhar, barramos a execução (Sanitização de Input)
-    if not numeros_validos:
-        st.error("Erro: Um ou ambos os valores fornecidos não são números válidos. Entrada bloqueada!")
-    
+        st.error("Erro: um ou ambos os valores fornecidos não são números válidos.")
     else:
-        # --- Execução dos Cálculos ---
         st.info("Realizando sua conta de forma segura. Confira o resultado abaixo:")
-        
-        if operador == "+":
-            resultado = numero1 + numero2
-            st.success(f"Resultado: {numero1} + {numero2} = **{resultado}**")
-            
-        elif operador == "-":
-            resultado = numero1 - numero2
-            st.success(f"Resultado: {numero1} - {numero2} = **{resultado}**")
-            
-        elif operador == "*":
-            resultado = numero1 * numero2
-            st.success(f"Resultado: {numero1} * {numero2} = **{resultado}**")
-            
-        elif operador == "/":
-            # Proteção contra Divisão por Zero
-            if numero2 == 0:
-                st.error("Erro de Segurança: Não é possível dividir por zero!")
-            else:
-                resultado = numero1 / numero2
-                st.success(f"Resultado: {numero1} / {numero2} = **{resultado}**")
+        try:
+            resultado = calcular(numero1, numero2, operador)
+        except ZeroDivisionError as erro:
+            st.error(f"Erro de segurança: {erro}")
+        else:
+            st.success(f"Resultado: {numero1} {operador} {numero2} = **{resultado}**")
