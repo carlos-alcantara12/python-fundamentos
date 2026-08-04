@@ -14,7 +14,7 @@ if acesso == "E" or acesso == "e":
     else:
         print("Senha incorreta, acesso negado.")
 
-# CORRIGIDO: mudamos de 'if' para 'elif' para que o Python só teste isso se o primeiro der falso
+
 elif acesso == "S" or acesso == "s":
     print('Até a próxima')
 
