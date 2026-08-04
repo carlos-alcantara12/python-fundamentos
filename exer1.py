@@ -7,10 +7,7 @@ while True:
     # e, se começar, converto sempre para minúsculo com lower().
     # também adicionei o (continue) para que o programa siga rodando.
 
-    # CORRIGIDO: a frase já era convertida para minúsculo com .lower(),
-    # mas a comparação usava 'Erro' com E maiúsculo. Como uma string
-    # minúscula nunca começa com 'Erro' (maiúsculo), essa condição
-    # nunca era verdadeira.
+   
     if frase.lower().startswith('erro'):
         print("Erro!!!, não aceitamos erros aqui.")
         continue
