@@ -16,7 +16,7 @@ if nome != "" and idade != "":
     total_letras = len(nome.replace(" ", "")) # CORRIGIDO: ordem do replace para remover espaços
     print(f"Seu nome possui o total de letras = {total_letras}")
     
-    # CORRIGIDO: Adicionado o 'f' antes das aspas e removido o espaço antes do [0]
+
     print(f"A primeira letra do seu nome é: {nome[0]}")
     print(f"A última letra de seu nome é: {nome[-1]}")
 
