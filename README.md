@@ -1,35 +1,72 @@
 # Python Fundamentos
 
-Repositório de estudos de Python básico: tipos de dados, operadores, condicionais,
-laços de repetição (`for`/`while`), listas, tuplas, desempacotamento, strings e
-manipulação de arquivos de exercícios práticos.
+Repositório que registra minha base em **Python**, construída por meio de exercícios práticos e pequenos projetos.
 
-## Estrutura
+O objetivo deste repositório é documentar a evolução nos fundamentos da linguagem, com atenção a **lógica de programação, validação de dados, legibilidade e organização de código**.
 
-- `aula*.py` — exercícios e demonstrações de conceitos individuais, em ordem de estudo.
-- `exer*.py` / `exercicio_*.py` — exercícios práticos aplicando os conceitos.
-- `palavrasecreta.py` — jogo de forca simplificado (loop, validação de entrada, strings).
-- `calculadora2.py` — calculadora de terminal com validação de entrada via `try/except`.
-- `testebase.py` — exercício de manipulação de strings (indexação, slicing).
-- `app.py` — calculadora com interface web, feita com [Streamlit](https://streamlit.io).
+## Projetos em destaque
 
-## Como rodar
+### Calculadora Web
+Aplicação desenvolvida com **Streamlit**, com validação de entrada, tratamento de erros e separação entre a lógica de cálculo e a interface.
 
-A maioria dos arquivos é independente e pode ser executada diretamente:
+**Conceitos aplicados:**
+- funções;
+- dicionários;
+- tratamento de exceções;
+- type hints;
+- validação de dados numéricos;
+- uso dos módulos `operator` e `math`.
+
+Arquivo principal: [`app.py`](./app.py)
+
+### Calculadora de Terminal
+Calculadora executada no terminal, criada para praticar entrada de dados, condicionais, operações matemáticas e tratamento de entradas inválidas.
+
+Arquivo principal: [`calculadora2.py`](./calculadora2.py)
+
+### Jogo da Palavra Secreta
+Projeto simples em terminal desenvolvido para praticar laços de repetição, strings, validação de entrada e controle de fluxo.
+
+Arquivo principal: [`palavrasecreta.py`](./palavrasecreta.py)
+
+## Fundamentos praticados
+
+- tipos de dados e variáveis;
+- operadores;
+- condicionais;
+- laços `for` e `while`;
+- strings;
+- listas e tuplas;
+- desempacotamento;
+- funções;
+- tratamento de exceções;
+- manipulação básica de arquivos;
+- organização de pequenos programas.
+
+Os arquivos `aula*.py` e `exer*.py` permanecem como registro do processo de aprendizagem e da prática dos conceitos fundamentais.
+
+## Executando os projetos
+
+Clone o repositório:
 
 ```bash
-python aula1.py
+git clone https://github.com/carlos-alcantara12/python-fundamentos.git
+cd python-fundamentos
 ```
 
-O `app.py` depende do Streamlit. Para rodá-lo:
+Para executar os programas de terminal:
+
+```bash
+python calculadora2.py
+```
+
+Para executar a calculadora web:
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Status
+## Sobre este repositório
 
-Material de estudo em progresso — parte do aprendizado de Python básico antes de
-avançar para tópicos intermediários (dicionários, funções, módulos, programação
-funcional).
+Este projeto representa uma etapa inicial da minha formação em programação. Ele é mantido como registro técnico dos fundamentos que servirão de base para estudos posteriores em engenharia da computação e segurança da informação.
