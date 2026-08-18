@@ -1,51 +1,50 @@
 # Python Fundamentos
 
-Repositório que registra minha base em **Python**, construída por meio de exercícios práticos e pequenos projetos.
+Repositório que registra minha base em **Python** por meio de aulas, exercícios e pequenos projetos.
 
-O objetivo deste repositório é documentar a evolução nos fundamentos da linguagem, com atenção a **lógica de programação, validação de dados, legibilidade e organização de código**.
+O foco aqui é documentar a evolução nos fundamentos da linguagem com atenção a **lógica de programação, validação de dados, legibilidade e organização de código**.
+
+## Estrutura
+
+```text
+python-fundamentos/
+├── aulas/        # sequência dos conceitos estudados
+├── exercicios/   # prática isolada dos fundamentos
+└── projetos/     # aplicações completas construídas durante o estudo
+```
 
 ## Projetos em destaque
 
 ### Calculadora Web
-Aplicação desenvolvida com **Streamlit**, com validação de entrada, tratamento de erros e separação entre a lógica de cálculo e a interface.
+Aplicação com **Streamlit**, validação de entrada, tratamento de erros e separação entre lógica de cálculo e interface.
 
-**Conceitos aplicados:**
-- funções;
-- dicionários;
-- tratamento de exceções;
-- type hints;
-- validação de dados numéricos;
-- uso dos módulos `operator` e `math`.
-
-Arquivo principal: [`app.py`](./app.py)
+Arquivo: [`projetos/calculadora_web.py`](./projetos/calculadora_web.py)
 
 ### Calculadora de Terminal
-Calculadora executada no terminal, criada para praticar entrada de dados, condicionais, operações matemáticas e tratamento de entradas inválidas.
+Calculadora de linha de comando com validação numérica, operadores permitidos e proteção contra divisão por zero.
 
-Arquivo principal: [`calculadora2.py`](./calculadora2.py)
+Arquivo: [`projetos/calculadora_terminal.py`](./projetos/calculadora_terminal.py)
 
-### Jogo da Palavra Secreta
-Projeto simples em terminal desenvolvido para praticar laços de repetição, strings, validação de entrada e controle de fluxo.
+### Palavra Secreta
+Jogo em terminal para praticar laços, strings, coleções, validação de entrada e controle de fluxo.
 
-Arquivo principal: [`palavrasecreta.py`](./palavrasecreta.py)
+Arquivo: [`projetos/palavra_secreta.py`](./projetos/palavra_secreta.py)
 
 ## Fundamentos praticados
 
 - tipos de dados e variáveis;
-- operadores;
+- operadores aritméticos e lógicos;
 - condicionais;
 - laços `for` e `while`;
 - strings;
 - listas e tuplas;
 - desempacotamento;
+- `enumerate`;
 - funções;
 - tratamento de exceções;
-- manipulação básica de arquivos;
-- organização de pequenos programas.
+- validação de dados.
 
-Os arquivos `aula*.py` e `exer*.py` permanecem como registro do processo de aprendizagem e da prática dos conceitos fundamentais.
-
-## Executando os projetos
+## Executando
 
 Clone o repositório:
 
@@ -54,19 +53,19 @@ git clone https://github.com/carlos-alcantara12/python-fundamentos.git
 cd python-fundamentos
 ```
 
-Para executar os programas de terminal:
+Exemplo de projeto de terminal:
 
 ```bash
-python calculadora2.py
+python projetos/calculadora_terminal.py
 ```
 
-Para executar a calculadora web:
+Para a calculadora web:
 
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run projetos/calculadora_web.py
 ```
 
-## Sobre este repositório
+## Sobre
 
-Este projeto representa uma etapa inicial da minha formação em programação. Ele é mantido como registro técnico dos fundamentos que servirão de base para estudos posteriores em engenharia da computação e segurança da informação.
+Este repositório representa uma etapa inicial da minha formação em programação e serve como registro técnico dos fundamentos que sustentam meus estudos em Engenharia da Computação e Segurança da Informação.
