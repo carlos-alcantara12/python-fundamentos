@@ -1,71 +1,73 @@
-# Python Fundamentos
+# Python Fundamentals
 
-Repositório que registra minha base em **Python** por meio de aulas, exercícios e pequenos projetos.
+This repository documents my foundation in **Python** through lessons, exercises, and small projects.
 
-O foco aqui é documentar a evolução nos fundamentos da linguagem com atenção a **lógica de programação, validação de dados, legibilidade e organização de código**.
+The goal is to record my progress with the language while developing **programming logic, data validation, code readability, and code organization**.
 
-## Estrutura
+## Structure
 
 ```text
 python-fundamentos/
-├── aulas/        # sequência dos conceitos estudados
-├── exercicios/   # prática isolada dos fundamentos
-└── projetos/     # aplicações completas construídas durante o estudo
+├── aulas/        # sequence of concepts studied
+├── exercicios/   # focused practice of programming fundamentals
+└── projetos/     # small applications built during the learning process
 ```
 
-## Projetos em destaque
+> The directory names remain in Portuguese because they reflect the original organization of my studies.
 
-### Calculadora Web
-Aplicação com **Streamlit**, validação de entrada, tratamento de erros e separação entre lógica de cálculo e interface.
+## Featured Projects
 
-Arquivo: [`projetos/calculadora_web.py`](./projetos/calculadora_web.py)
+### Web Calculator
+A **Streamlit** application with input validation, error handling, and separation between calculation logic and the user interface.
 
-### Calculadora de Terminal
-Calculadora de linha de comando com validação numérica, operadores permitidos e proteção contra divisão por zero.
+File: [`projetos/calculadora_web.py`](./projetos/calculadora_web.py)
 
-Arquivo: [`projetos/calculadora_terminal.py`](./projetos/calculadora_terminal.py)
+### Terminal Calculator
+A command-line calculator with numeric input validation, supported-operator checks, and division-by-zero protection.
 
-### Palavra Secreta
-Jogo em terminal para praticar laços, strings, coleções, validação de entrada e controle de fluxo.
+File: [`projetos/calculadora_terminal.py`](./projetos/calculadora_terminal.py)
 
-Arquivo: [`projetos/palavra_secreta.py`](./projetos/palavra_secreta.py)
+### Secret Word Game
+A terminal game created to practice loops, strings, collections, input validation, and control flow.
 
-## Fundamentos praticados
+File: [`projetos/palavra_secreta.py`](./projetos/palavra_secreta.py)
 
-- tipos de dados e variáveis;
-- operadores aritméticos e lógicos;
-- condicionais;
-- laços `for` e `while`;
+## Fundamentals Practiced
+
+- data types and variables;
+- arithmetic and logical operators;
+- conditional statements;
+- `for` and `while` loops;
 - strings;
-- listas e tuplas;
-- desempacotamento;
+- lists and tuples;
+- unpacking;
 - `enumerate`;
-- funções;
-- tratamento de exceções;
-- validação de dados.
+- functions;
+- exception handling;
+- data validation.
 
-## Executando
+## Running the Projects
 
-Clone o repositório:
+Clone the repository:
 
 ```bash
 git clone https://github.com/carlos-alcantara12/python-fundamentos.git
 cd python-fundamentos
 ```
 
-Exemplo de projeto de terminal:
+Run a terminal project, for example:
 
 ```bash
 python projetos/calculadora_terminal.py
 ```
 
-Para a calculadora web:
+To run the web calculator:
 
 ```bash
 pip install -r requirements.txt
 streamlit run projetos/calculadora_web.py
 ```
 
-## Sobre
+## About This Repository
 
-Este repositório representa uma etapa inicial da minha formação em programação e serve como registro técnico dos fundamentos que sustentam meus estudos em Engenharia da Computação e Segurança da Informação.
+This repository represents an early stage of my programming education and serves as a technical record of the fundamentals supporting my studies in Computer Engineering and my growing interest in cybersecurity.
