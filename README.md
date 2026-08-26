@@ -1,8 +1,12 @@
 # Python Fundamentals
 
-This repository documents my foundation in **Python** through lessons, exercises, and small projects.
+This repository documents my early foundation in **Python** through lessons, selected exercises, and small practice applications.
 
-The goal is to record my progress with the language while developing **programming logic, data validation, code readability, and code organization**.
+Its purpose is to record concepts I have already studied while developing programming logic, input validation, code readability, and basic organization.
+
+## Repository Scope
+
+This is a **fundamentals repository**, not a collection of standalone portfolio projects. Larger applications will receive their own repositories when they have independent requirements, structure, documentation, and development history.
 
 ## Structure
 
@@ -15,20 +19,23 @@ python-fundamentos/
 
 > The directory names remain in Portuguese because they reflect the original organization of my studies.
 
-## Featured Projects
+## Small Practice Applications
 
 ### Web Calculator
-A **Streamlit** application with input validation, error handling, and separation between calculation logic and the user interface.
+
+A Streamlit application used to practice functions, numeric input validation, exception handling, and a simple web interface.
 
 File: [`projetos/calculadora_web.py`](./projetos/calculadora_web.py)
 
 ### Terminal Calculator
-A command-line calculator with numeric input validation, supported-operator checks, and division-by-zero protection.
+
+A command-line calculator with numeric input validation, supported-operator checks, and division-by-zero handling.
 
 File: [`projetos/calculadora_terminal.py`](./projetos/calculadora_terminal.py)
 
 ### Secret Word Game
-A terminal game created to practice loops, strings, collections, input validation, and control flow.
+
+A terminal exercise used to practice loops, strings, sets, input validation, and control flow.
 
 File: [`projetos/palavra_secreta.py`](./projetos/palavra_secreta.py)
 
@@ -39,14 +46,13 @@ File: [`projetos/palavra_secreta.py`](./projetos/palavra_secreta.py)
 - conditional statements;
 - `for` and `while` loops;
 - strings;
-- lists and tuples;
-- unpacking;
-- `enumerate`;
-- functions;
+- lists, tuples, and sets;
+- unpacking and `enumerate`;
+- basic functions;
 - exception handling;
-- data validation.
+- input validation.
 
-## Running the Projects
+## Running the Applications
 
 Clone the repository:
 
@@ -55,7 +61,7 @@ git clone https://github.com/carlos-alcantara12/python-fundamentos.git
 cd python-fundamentos
 ```
 
-Run a terminal project, for example:
+Run a terminal application, for example:
 
 ```bash
 python projetos/calculadora_terminal.py
@@ -68,6 +74,6 @@ pip install -r requirements.txt
 streamlit run projetos/calculadora_web.py
 ```
 
-## About This Repository
+## Current Stage
 
-This repository represents an early stage of my programming education and serves as a technical record of the fundamentals supporting my studies in Computer Engineering and my growing interest in cybersecurity.
+The code reflects an early stage of my programming education. I am keeping this repository focused on concepts I can explain and develop at my current level.
