@@ -29,10 +29,10 @@ def numero_valido(valor: float) -> bool:
 
 # --- Interface ---
 
-st.set_page_config(page_title="Calculadora Segura", page_icon="🧮", layout="centered")
+st.set_page_config(page_title="Calculadora Web", page_icon="🧮", layout="centered")
 
 st.title("Calculadora Web")
-st.write("Desenvolvida por Carlos - Foco em Validação Segura de Dados")
+st.write("Projeto de estudo com validação de entrada e tratamento de erros.")
 st.divider()
 
 with st.form(key="calculadora_form"):
@@ -45,16 +45,16 @@ if botao_calcular:
     try:
         numero1 = float(numero1_input)
         numero2 = float(numero2_input)
-       
+
         if not (numero_valido(numero1) and numero_valido(numero2)):
             raise ValueError("Valor não é um número finito.")
     except ValueError:
         st.error("Erro: um ou ambos os valores fornecidos não são números válidos.")
     else:
-        st.info("Realizando sua conta de forma segura. Confira o resultado abaixo:")
+        st.info("Cálculo realizado. Confira o resultado abaixo:")
         try:
             resultado = calcular(numero1, numero2, operador)
         except ZeroDivisionError as erro:
-            st.error(f"Erro de segurança: {erro}")
+            st.error(f"Erro: {erro}")
         else:
             st.success(f"Resultado: {numero1} {operador} {numero2} = **{resultado}**")
